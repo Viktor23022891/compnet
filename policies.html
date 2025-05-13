@@ -13,12 +13,13 @@
   </head>
   <body>
     <header>
-      <a href="#main-content" class="skip-link">Skip to main content</a>
+      <a href="#main-content">Skip to main content</a>
       <div class="logo">
         <a href="index.html"><img src="./img/logo.png" alt="CompNet Logo" /></a>
       </div>
       <button
         id="open-nav-btn"
+        onclick="openNav()"
         aria-label="Open menu"
         aria-expanded="false"
         aria-controls="main-nav"
@@ -35,10 +36,10 @@
           />
         </svg>
       </button>
-      <nav id="main-nav">
+      <nav id="nav">
         <ul>
           <li>
-            <button id="close-nav-btn" aria-label="Close menu">
+            <button id="close-nav-btn" onclick="closeNav()" aria-label="Close menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="40px"
@@ -60,11 +61,11 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
-      <div id="overlay" aria-hidden="true"></div>
+      <div id="overlay" onclick="closeNav()" aria-hidden="true"></div>
     </header>
-
+    
     <main id="main-content">
-      <section class="page-title">
+      <section>
         <h1>Our Policies</h1>
         <p>
           Please read our policies carefully. By using our website and services,
@@ -72,7 +73,7 @@
         </p>
       </section>
 
-      <article id="privacy" class="policy-section">
+      <section>
         <h2>Privacy Policy</h2>
         <p><strong>Last Updated: May 7, 2025</strong></p>
         <p>
@@ -159,9 +160,9 @@
             would follow here.)</em
           >
         </p>
-      </article>
+      </section>
 
-      <article id="terms" class="policy-section">
+      <section>
         <h2>Repair Terms & Conditions</h2>
         <p><strong>Last Updated: May 7, 2025</strong></p>
         <p>
@@ -234,9 +235,9 @@
             here.)</em
           >
         </p>
-      </article>
+      </section>
 
-      <article id="returns" class="policy-section">
+      <section>
         <h2>Returns & Refund Policy (for Products Sold)</h2>
         <p><strong>Last Updated: May 7, 2025</strong></p>
         <p>
@@ -273,7 +274,7 @@
           may be subject to a restocking fee. This will be communicated at the
           time of purchase.
         </p>
-      </article>
+      </section>
     </main>
 
     <footer>
